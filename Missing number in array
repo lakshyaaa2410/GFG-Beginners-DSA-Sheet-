@@ -6,6 +6,6 @@
             int tempXOR = i ^ array[i];
             missingNumber = missingNumber ^ tempXOR;
         }
-        
+ 
         return missingNumber;
     }
