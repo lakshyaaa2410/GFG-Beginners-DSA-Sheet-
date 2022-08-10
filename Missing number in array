@@ -1,0 +1,11 @@
+    int MissingNumber(vector<int>& array, int n) {
+        int missingNumber = 0;
+        
+        for (int i = 1; i <= n; i++)
+        {
+            int tempXOR = i ^ array[i];
+            missingNumber = missingNumber ^ tempXOR;
+        }
+        
+        return missingNumber;
+    }
