@@ -1,0 +1,22 @@
+    bool isAnagram(string a, string b){
+        
+        if (a.size() != b.size())
+            return false;
+            
+        unordered_map<char, int> hMap;
+        for (int i = 0; i < a.size(); i++)
+        {
+            hMap[a[i]]++;
+            hMap[b[i]]--;
+        }
+        
+        bool isAnagram = true;
+        
+        for (auto ele : hMap)
+        {
+            if (ele.second != 0)
+                isAnagram = false;
+        }
+        
+        return isAnagram;
+    }
